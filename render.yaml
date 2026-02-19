@@ -1,0 +1,30 @@
+services:
+  - type: worker
+    name: ghostgpt-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: OWNER_USERNAME
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: SERVICE_API_KEY
+        sync: false
+      - key: SERVICE_ENDPOINT
+        sync: false
+      - key: DB_PATH
+        sync: false
+      - key: CRYPTO_WALLET_TRC
+        sync: false
+      - key: CRYPTO_WALLET_SOL
+        sync: false
+      - key: CRYPTO_WALLET_BTC
+        sync: false
+      - key: CRYPTO_WALLET_ETH
+        sync: false
+      - key: CRYPTO_WALLET_BSC
+        sync: false
